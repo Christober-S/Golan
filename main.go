@@ -8,7 +8,7 @@ func main() { // program starts form main
 	const airlineTickets = 200           // constant values cannot be changed
 	var remainingTickets = 200
 
-	fmt.Println("Welcome to the", airlineName, "ticket booking application")
+	fmt.Printf("Welcome to the %v ticket booking application", airlineName)
 	fmt.Println("We have total of", airlineTickets, "tickets and", remainingTickets, "are still available")
 	fmt.Println("Book your tickets here!")
 
