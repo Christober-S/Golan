@@ -1,8 +1,7 @@
-package main
+package main //every statement in go written in packages
 
-import "fmt"
+import "fmt" //In go if we need do use built in packages we need to import explicityly
 
-func main() {
+func main() { // program starts form main
 	fmt.Println("Hello World!")
-	fmt.Print("he")
 }
