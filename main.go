@@ -1,29 +1,21 @@
-// Golang program to show how
-// to take input from the user
-package main
+package main //every statement in go written in packages
+import "fmt" //In go if we need do use built in packages we need to import explicityly
+func main() { // program starts form main
+	var airlineName = "Emirates Airline" // Variable declaration
+	const airlineTickets = 200           // constant values cannot be changed
+	var remainingTickets = 200
+	var userName string // To specifiy the type of data
+	var userTicket int  // To specifiy the int type of dT
 
-import "fmt"
+	fmt.Printf("Welcome to the %v ticket booking application", airlineName)
 
-// main function
-func main() {
+	fmt.Printf("Welcome to the %v ticket booking application", airlineName) // %v is  the placehoder for value
+	fmt.Println("We have total of", airlineTickets, "tickets and", remainingTickets, "are still available")
+	fmt.Println("Book your tickets here!")
+	fmt.Print("Enter the user name: ")
+	fmt.Scan(&userName)
+	fmt.Print("Enter the no of tickets: ")
+	fmt.Scan(&userTicket)
+	fmt.Printf("The user %v has booked %v number of ticktets", userName, userTicket)
 
-	// Println function is used to
-	// display output in the next line
-	fmt.Println("Enter Your First Name: ")
-
-	// var then variable name then variable type
-	var first string
-
-	// Taking input from user
-	fmt.Scanln(&first)
-	fmt.Println("Enter Second Last Name: ")
-	var second string
-	fmt.Scanln(&second)
-
-	// Print function is used to
-	// display output in the same line
-	fmt.Print("Your Full Name is: ")
-
-	// Addition of two string
-	fmt.Print(first + " " + second)
 }
