@@ -1,21 +1,25 @@
 package main //every statement in go written in packages
 
-import "fmt" //In go if we need do use built in packages we need to import explicityly
+//In go if we need do use built in packages we need to import explicityly
 
 func main() { // program starts form main
 
-	var airlineName = "Emirates Airline" // Variable declaration
-	const airlineTickets = 200           // constant values cannot be changed
-	var remainingTickets = 200
-	var userName string // To specifiy the type of data
-	var userTicket int  // To specifiy the int type of dT
+	/*
+			#DATA TYPES...
 
-	userName = "christober"
-	userTicket = 7
+			GO			JAVA
+			int8		byte
+			int16		short
+		    int32		int
+			int 64		long
+			uint		postive,whole numbers
 
-	fmt.Printf("Welcome to the %v ticket booking application", airlineName) // %v is  the placehoder for value
-	fmt.Println("We have total of", airlineTickets, "tickets and", remainingTickets, "are still available")
-	fmt.Println("Book your tickets here!")
-	fmt.Printf("The user %v has booked %v number of ticktets", userName, userTicket)
+
+			float32
+			float64
+			complex32
+			complex64
+
+	*/
 
 }
