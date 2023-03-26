@@ -1,11 +1,29 @@
-package main //every statement in go written in packages
+// Golang program to show how
+// to take input from the user
+package main
 
-import "fmt" //In go if we need do use built in packages we need to import explicityly
+import "fmt"
 
-func main() { // program starts form main
+// main function
+func main() {
 
-	airlineName := "Emirates" //This is same as var airlineName = "Emirates"
-	//But it simplifies that and it doesn't add new functionality
-	fmt.Print(airlineName)
+	// Println function is used to
+	// display output in the next line
+	fmt.Println("Enter Your First Name: ")
 
+	// var then variable name then variable type
+	var first string
+
+	// Taking input from user
+	fmt.Scanln(&first)
+	fmt.Println("Enter Second Last Name: ")
+	var second string
+	fmt.Scanln(&second)
+
+	// Print function is used to
+	// display output in the same line
+	fmt.Print("Your Full Name is: ")
+
+	// Addition of two string
+	fmt.Print(first + " " + second)
 }
