@@ -12,7 +12,7 @@ func main() { // program starts form main
 	var lastName string
 	var email string
 	var userTickets uint
-	var bookings [50]string //Array of size 50 with String datatype
+	var bookings []string //Array of size 50 with String datatype
 
 	fmt.Print("Enter your first name: ")
 	fmt.Scan(&firstName)
@@ -26,7 +26,7 @@ func main() { // program starts form main
 	fmt.Print("Enter your no of tickets: ")
 	fmt.Scan(&userTickets)
 
-	bookings[0] = firstName + " " + lastName
+	bookings = append(bookings, firstName+" "+lastName)
 	remainingTickets = remainingTickets - userTickets //In go lang we can't do calculation's if both are not same datatypes
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
