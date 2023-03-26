@@ -3,7 +3,7 @@ import "fmt" //In go if we need do use built in packages we need to import expli
 func main() { // program starts form main
 	var airlineName = "Emirates Airline" // Variable declaration
 	const airlineTickets = 200           // constant values cannot be changed
-	var remainingTickets = 200
+	var remainingTickets uint = 200
 
 	fmt.Printf("Welcome to the %v ticket booking application\n", airlineName) // %v is  the placehoder for value
 	fmt.Println("We have total of", airlineTickets, "tickets and", remainingTickets, "are still available")
@@ -11,7 +11,8 @@ func main() { // program starts form main
 	var firstName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
+	var bookings [50]string //Array of size 50 with String datatype
 
 	fmt.Print("Enter your first name: ")
 	fmt.Scan(&firstName)
@@ -25,6 +26,13 @@ func main() { // program starts form main
 	fmt.Print("Enter your no of tickets: ")
 	fmt.Scan(&userTickets)
 
+	bookings[0] = firstName + " " + lastName
+	remainingTickets = remainingTickets - userTickets //In go lang we can't do calculation's if both are not same datatypes
+
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
+	fmt.Printf("%v tickets available for %v\n", remainingTickets, airlineName)
+	fmt.Printf("%v\n", bookings[0])
+	fmt.Printf("%T\n", bookings)
+	fmt.Printf("Length of array:%v", len(bookings)) // length of array
 
 }
